@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect, useState, useCallback } from "react";
 import { ProjetosService } from "../services/api/projetos/ProjetosService";
 
 const ProjetosContext = createContext();
@@ -15,6 +15,7 @@ const ProjetosProvider = ({ children }) => {
   const [projetos, setProjetos] = useState([]);
   const [filteredProjetos, setFilteredProjetos] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("Todos");
+  const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
     const loadProjetos = async () => {
@@ -32,6 +33,12 @@ const ProjetosProvider = ({ children }) => {
     loadProjetos();
   }, []);
 
+  // Use useCallback para evitar que a função getById seja recriada em cada renderização
+  const getById = useCallback(async (id) => {
+    const data = await ProjetosService.getById(id);
+    return data;
+  }, []);
+
   const handleFilterChange = (category) => {
     setSelectedCategory(category);
     if (category === "Todos") {
@@ -42,6 +49,7 @@ const ProjetosProvider = ({ children }) => {
       );
       setFilteredProjetos(filtered);
     }
+    setSelectedProject(null);
   };
 
   const toggleFavorite = (projectId) => {
@@ -71,7 +79,15 @@ const ProjetosProvider = ({ children }) => {
 
   return (
     <ProjetosContext.Provider
-      value={{ projetos, filteredProjetos, handleFilterChange, toggleFavorite }}
+      value={{
+        getById,
+        projetos,
+        filteredProjetos,
+        handleFilterChange,
+        toggleFavorite,
+        selectedProject,
+        setSelectedProject,
+      }}
     >
       {children}
     </ProjetosContext.Provider>

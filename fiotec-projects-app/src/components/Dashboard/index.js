@@ -1,33 +1,39 @@
 import React from "react";
 import { useProjetos } from "../../context/ProjetosContext";
-import Card from "../Card";
 import { Filter } from "../Filter";
+import ProjetoView from "../../pages/ProjetoView";
+import { Card } from "../Card";
 
 const Dashboard = () => {
-  const { projetos, filteredProjetos } = useProjetos();
+  const { projetos, filteredProjetos, selectedProject, setSelectedProject } =
+    useProjetos();
 
   return (
     <div>
-      <div>
+      <div className="filter">
         <Filter />
       </div>
-      <div>
+      <div className="projetos">
         <h1>Projetos em Destaque</h1>
-        <p>
-          Mostrando {filteredProjetos?.length} de {projetos?.length} resultados
-        </p>
-      </div>
-      <div>
-        {filteredProjetos?.length === 0 ? (
-          <p>Nenhum projeto encontrado.</p>
-        ) : (
-          <div>
-            {filteredProjetos.map((projeto) => (
-              <Card key={projeto.id} projeto={projeto} />
-            ))}
-          </div>
+        {!selectedProject && (
+          <p>
+            Mostrando {filteredProjetos.length} de {projetos.length} resultados
+          </p>
         )}
       </div>
+      {selectedProject ? (
+        <ProjetoView />
+      ) : (
+        <div>
+          {filteredProjetos.map((projeto) => (
+            <Card
+              key={projeto.id}
+              projeto={projeto}
+              onView={() => setSelectedProject(projeto)}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

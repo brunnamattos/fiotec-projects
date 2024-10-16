@@ -1,15 +1,16 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Dashboard from "../components/Dashboard";
 import { Favorites } from "../pages/Favorites";
-import ProjectView from "../pages/ProjectView";
+import ProjetoView from "../pages/ProjetoView";
 
 const AppRoutes = () => {
   return (
     <Routes>
+      <Route path="*" element={<Navigate to="/projetos" />} />
       <Route path="/projetos" element={<Dashboard />} />
-      <Route path="/meus_favoritos" element={<Favorites />} />
-      <Route path="/projeto/:id" element={<ProjectView />} />
+      <Route path="/projetos/:id" element={<ProjetoView />} />
+      <Route path="/favoritos" element={<Favorites />} />
     </Routes>
   );
 };

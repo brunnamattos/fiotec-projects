@@ -15,7 +15,7 @@ const Header = () => {
         <button onClick={() => handleNavigate("/projetos")}>
           Projetos em Destaque
         </button>
-        <button onClick={() => handleNavigate("/meus_favoritos")}>
+        <button onClick={() => handleNavigate("/favoritos")}>
           Meus Favoritos
         </button>
       </nav>
