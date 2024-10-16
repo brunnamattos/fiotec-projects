@@ -19,9 +19,16 @@ const ProjetosProvider = ({ children }) => {
   useEffect(() => {
     const loadProjetos = async () => {
       const result = await ProjetosService.getAll();
-      setProjetos(result);
-      setFilteredProjetos(result);
+      const savedFavorites = JSON.parse(localStorage.getItem("projetos")) || [];
+      const updatedProjects = result.map((projeto) => {
+        const isFavorite = savedFavorites.some((fav) => fav.id === projeto.id);
+        return { ...projeto, favorite: isFavorite };
+      });
+
+      setProjetos(updatedProjects);
+      setFilteredProjetos(updatedProjects);
     };
+
     loadProjetos();
   }, []);
 
