@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useProjetos } from "../../context/ProjetosContext";
+import { Filter } from "../../components/Filter";
 
 const ProjetoView = () => {
   const { id } = useParams();
@@ -27,6 +28,7 @@ const ProjetoView = () => {
 
   return (
     <div>
+      <Filter />
       <h2>{selectedProject?.title}</h2>
       <img src={selectedProject?.image} alt={selectedProject?.title} />
       <p>{selectedProject?.description}</p>

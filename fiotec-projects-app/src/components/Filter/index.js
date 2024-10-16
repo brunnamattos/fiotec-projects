@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import { categories } from "../../utils/categories";
 import { useProjetos } from "../../context/ProjetosContext";
+import { useNavigate } from "react-router-dom";
 
 export const Filter = () => {
   const { handleFilterChange } = useProjetos();
   const [selectedCategory, setSelectedCategory] = useState("Todos");
+  const navigate = useNavigate();
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
     handleFilterChange(category);
+    navigate("/");
   };
 
   return (
