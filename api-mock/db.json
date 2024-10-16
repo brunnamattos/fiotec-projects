@@ -1,0 +1,52 @@
+{
+  "projetos": [
+    {
+      "id": 1,
+      "title": "Ensp/Fiocruz promove incentivos à redução do uso de agrotóxicos",
+      "description": "O uso de agrotóxicos é muito comum na agricultura, visto que controlam a incidência de insetos, doenças ou plantas daninhas que causam danos às plantações. Entretanto, o uso dessas substâncias causa grande impacto no meio ambiente. Diante disso, a Escola Nacional de Saúde Pública Sergio Arouca (Ensp) propõe um projeto no qual a reflexão crítica é o centro das atividades do programa, que conta com a criação de um filme como instrumento pedagógico, encontros para discussão, organização de cursos de multiplicadores para profissionais da área, caravanas de mobilização social e a elaboração de um seminário nacional.",
+      "category": "Ensino",
+      "categoryId": 1,
+      "image": "https://www.fiotec.fiocruz.br/images/2018/Projetos_em_destaque/Agrotoxicos_interna.png"
+    },
+    {
+      "id": 2,
+      "title": "Combate à doença de Chagas na América Latina",
+      "description": "No dia 14 de abril de 2021, Dia Mundial da doença de Chagas, a Fundação Oswaldo Cruz deu um grande passo na luta para eliminar a transmissão congênita da doença em países da América Latina, ao firmar convênio com a Unitad através do projeto CUIDA Chagas - Comunidades Unidas para Inovação, Desenvolvimento e Atenção para a doença de Chagas. Coordenado pelo Instituto Nacional de Infectologia Evandro Chagas (INI/Fiocruz), o projeto conta com cofinanciamento do Ministério da Saúde do Brasil, suporte da Fundação de apoio à Fiocruz (Fiotec) e pretende reduzir a possibilidade de transmissão da doença de Chagas para novas mães e seus bebês, eliminando essa via evitável da contaminação.",
+      "category": "Pesquisa",
+      "categoryId": 2,
+      "image": "https://www.fiotec.fiocruz.br/images/2022/CUIDA-Chagas_Projetos-em-Destaque.jpg?1656936430804"
+    },
+    {
+      "id": 3,
+      "title": "Fiocruz garante soberania nacional na produção da vacina contra Covid-19",
+      "description": "A Fiotec foi a responsável pela gestão financeira e administrativa do projeto que permitiu a produção, aqui no Brasil, da vacina Oxford/AstraZeneca contra a Covid-19. A instituição esteve envolvida na aquisição de equipamentos e insumos que auxiliaram o processo de absorção de tecnologia pelo Instituto Nacional de Imunobiológicos (Bio-Manguinhos/Fiocruz). Inicialmente, o imunizante era produzido utilizando o Ingrediente Farmacêutico Ativo (IFA) importado, mas hoje a Fiocruz já realiza a produção nacional do insumo, garantindo a distribuição de uma vacina 100% brasileira. A conclusão do processo de transferência de tecnologia, que permite a produção do IFA por Bio-Manguinhos, também fez parte de um projeto gerido pela Fiotec.",
+      "category": "Estímulo à Inovação",
+      "categoryId": 3,
+      "image": "https://www.fiotec.fiocruz.br/images/2022/Projeto-Destaque_Vacina-Covid19.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Luta pela garantia de direitos e fortalecimento da cultura de favela",
+      "description": "O projeto Psicointegra Favela, desenvolvido pelo Instituto Oswaldo Cruz (IOC) em parceria com o coletivo de mesmo nome, investe na formação de moradores de favelas que tenham passado por violações de Direitos Humanos. O objetivo é compartilhar conteúdos voltados à promoção da saúde, com enfoque antirracista, além de oferecer acolhimento e escuta ativa aos habitantes do Morro do Urubu e do bairro de Santa Cruz, na cidade do Rio de Janeiro.",
+      "category": "Extensão",
+      "categoryId": 4,
+      "image": "https://www.fiotec.fiocruz.br/images/2022/Projeto-Destaque_Psicointegra-Favela.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Complexo de Preservação e Difusão dos Acervos Científicos da Fiocruz",
+      "description": "O projeto Complexo de Preservação e Difusão dos Acervos Científicos da Fiocruz contemplou aquisição de equipamentos, acessórios e serviços para os acervos arquitetônico, arquivístico, bibliográfico, museológico e coleções biológicas da Fiocruz, dentro do contexto mais amplo das iniciativas empreendidas pelo Preservo, Complexo de Acervos da Fiocruz.",
+      "category": "Desenvolvimento Institucional",
+      "categoryId": 5,
+      "image": "https://www.fiotec.fiocruz.br/images/2022/Preservo-BNDES_Projetos-em-Destaque.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Método Wolbachia: uma estratégia poderosa para o controle de arboviroses",
+      "description": "O método Wolbachia consiste na liberação de mosquitos Aedes aegypti juntamente com a bactéria Wolbachia, que impede que os vírus da dengue, zika e chikungunya se desenvolvam no mosquito, contribuindo para a redução da transmissão de arboviroses. A bactéria se faz presente em 60% dos insetos, mas não pode ser encontrada naturalmente nos Aedes aegypti. ",
+      "category": "Desenvolvimento Científico e Tecnológico",
+      "categoryId": 6,
+      "image": "https://www.fiotec.fiocruz.br/images/2022/Metodo-Wolbachia_Projetos-em-Destaque.jpg"
+    }
+  ]
+}
