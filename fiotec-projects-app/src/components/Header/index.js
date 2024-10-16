@@ -12,10 +12,12 @@ const Header = () => {
     <header>
       <nav>
         <button onClick={() => handleNavigate("/projetos")}>Home</button>
-        <button onClick={() => handleNavigate("/projetos")}>Projetos em Destaque</button>
+        <button onClick={() => handleNavigate("/projetos")}>
+          Projetos em Destaque
+        </button>
         <button onClick={() => handleNavigate("/meus_favoritos")}>
           Meus Favoritos
-        </button> 
+        </button>
       </nav>
     </header>
   );

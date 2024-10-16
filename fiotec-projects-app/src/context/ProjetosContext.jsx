@@ -30,7 +30,9 @@ const ProjetosProvider = ({ children }) => {
     if (category === "Todos") {
       setFilteredProjetos(projetos);
     } else {
-      const filtered = projetos.filter(projeto => projeto.category === category);
+      const filtered = projetos.filter(
+        (projeto) => projeto.category === category
+      );
       setFilteredProjetos(filtered);
     }
   };
@@ -44,21 +46,26 @@ const ProjetosProvider = ({ children }) => {
     });
 
     setProjetos(updatedProjects);
-    
-    const filtered = selectedCategory === "Todos"
-      ? updatedProjects
-      : updatedProjects.filter(projeto => projeto.category === selectedCategory);
-    
+
+    const filtered =
+      selectedCategory === "Todos"
+        ? updatedProjects
+        : updatedProjects.filter(
+            (projeto) => projeto.category === selectedCategory
+          );
+
     setFilteredProjetos(filtered);
 
     localStorage.setItem(
       "projetos",
-      JSON.stringify(updatedProjects.filter(projeto => projeto.favorite))
+      JSON.stringify(updatedProjects.filter((projeto) => projeto.favorite))
     );
   };
 
   return (
-    <ProjetosContext.Provider value={{ projetos, filteredProjetos, handleFilterChange, toggleFavorite }}>
+    <ProjetosContext.Provider
+      value={{ projetos, filteredProjetos, handleFilterChange, toggleFavorite }}
+    >
       {children}
     </ProjetosContext.Provider>
   );

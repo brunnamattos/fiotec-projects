@@ -9,19 +9,26 @@ const ProjetosReducer = (state, action) => {
       });
       localStorage.setItem(
         "projetos",
-        JSON.stringify(updatedFavoriteProjects.filter(projeto => projeto.favorite))
+        JSON.stringify(
+          updatedFavoriteProjects.filter((projeto) => projeto.favorite)
+        )
       );
       return { ...state, projetos: updatedFavoriteProjects };
 
     case "INITIALIZE_PROJECTS":
-      return { ...state, allProjects: action.payload, projetos: action.payload }; // Armazenar todos os projetos
+      return {
+        ...state,
+        allProjects: action.payload,
+        projetos: action.payload,
+      };
 
     case "FILTER_PROJECTS": {
       const { payload } = action;
-      const filteredProjects = payload === "Todos"
-        ? state.allProjects // Retornar todos os projetos
-        : state.allProjects.filter((projeto) => projeto.category === payload); // Filtrar pela categoria
-      return { ...state, projetos: filteredProjects }; // Atualizar apenas os projetos filtrados
+      const filteredProjects =
+        payload === "Todos"
+          ? state.allProjects
+          : state.allProjects.filter((projeto) => projeto.category === payload);
+      return { ...state, projetos: filteredProjects };
     }
 
     default:
