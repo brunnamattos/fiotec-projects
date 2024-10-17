@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/brunnamattos/fiotec-projects">
-    <img src="src/assets/images/logo.png" alt="Logo" height="80">
+    <img src="/fiotec-projects-app/src/assets/images/logo.png" alt="Logo" height="80">
   </a>
 
   <h3 align="center">FioTec Project Showcase</h3>
@@ -52,7 +52,7 @@
 <br />
 <br />
 <a href="https://fiotec-projects-topaz.vercel.app/">
-    <img src="src/assets/images/demo.png" alt="Demo app">
+    <img src="/fiotec-projects-app/src/assets/images/demo.png" alt="Demo app">
 </a>
 <br />
 <br />
