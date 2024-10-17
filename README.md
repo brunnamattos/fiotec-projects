@@ -14,7 +14,7 @@
     <a href="https://github.com/brunnamattos/fiotec-projects"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://fiotec-projects-topaz.vercel.app/">View Demo</a>
+    <a href="https://fiotec-projects-tboi.vercel.app/projetos">View Demo</a>
     ·
     <a href="https://github.com/brunnamattos/fiotec-projects/issues">Report Bug</a>
     ·
@@ -51,7 +51,7 @@
 
 <br />
 <br />
-<a href="https://fiotec-projects-topaz.vercel.app/">
+<a href="https://fiotec-projects-tboi.vercel.app/projetos">
     <img src="/fiotec-projects-app/src/assets/images/demo.png" alt="Demo app">
 </a>
 <br />
