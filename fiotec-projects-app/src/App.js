@@ -2,16 +2,16 @@ import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import ProjetosProvider from "./context/ProjetosContext";
 import Header from "./components/Header";
-import AppRoutes from "./routes/routes";
+import AppRoutes from "./routes";
 
 const App = () => {
   return (
-    <ProjetosProvider>
-      <Router>
+    <Router>
+      <ProjetosProvider>
         <Header />
         <AppRoutes />
-      </Router>
-    </ProjetosProvider>
+      </ProjetosProvider>
+    </Router>
   );
 };
 

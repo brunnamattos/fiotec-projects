@@ -1,33 +1,37 @@
-import React, { useState } from "react";
+import React from "react";
 import { categories } from "../../utils/categories";
 import { useProjetos } from "../../context/ProjetosContext";
 import { useNavigate } from "react-router-dom";
+import { Nav } from "react-bootstrap";
+import "./index.css";
 
 export const Filter = () => {
-  const { handleFilterChange } = useProjetos();
-  const [selectedCategory, setSelectedCategory] = useState("Todos");
+  const { selectedCategory, setSelectedCategory, handleFilterChange } =
+    useProjetos();
   const navigate = useNavigate();
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
     handleFilterChange(category);
-    navigate("/");
+    navigate("/projetos");
   };
 
   return (
     <div className="filter-container">
-      <h3>Filtros</h3>
-      <div>
+      <h5>Filtrar por categoria</h5>
+      <Nav className="filter-nav">
         {categories.map(({ id, name }) => (
-          <div
+          <span
             key={id}
             onClick={() => handleCategoryChange(name)}
-            className={selectedCategory === name ? "selected" : ""}
+            className={`filter-item ${
+              selectedCategory === name ? "active" : ""
+            }`}
           >
             {name}
-          </div>
+          </span>
         ))}
-      </div>
+      </Nav>
     </div>
   );
 };

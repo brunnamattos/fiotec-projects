@@ -7,10 +7,10 @@ import ProjetoView from "../pages/ProjetoView";
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="*" element={<Navigate to="/projetos" />} />
       <Route path="/projetos" element={<Dashboard />} />
       <Route path="/projetos/:id" element={<ProjetoView />} />
       <Route path="/favoritos" element={<Favorites />} />
+      <Route path="*" element={<Navigate to="/projetos" replace />} />
     </Routes>
   );
 };

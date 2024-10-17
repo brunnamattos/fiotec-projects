@@ -1,0 +1,40 @@
+.dashboard {
+  display: flex;
+  margin: 0 5.625rem;
+}
+
+.projetos-container {
+  width: 100%;
+  margin: 3rem 0 0 4.625rem;
+}
+
+.info-projetos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.75rem;
+}
+
+.info-projetos h5 {
+  font-weight: bold;
+}
+
+.results {
+  text-align: right;
+  margin: 0;
+}
+@media (max-width: 1270px) {
+  .dashboard {
+    flex-direction: column;
+    margin: 0 2.813rem;
+  }
+
+  .projetos-container {
+    max-width: none;
+    margin: 3rem 0;
+  }
+
+  .info-projetos, h5 {
+    font-size: 1rem;
+  }
+}

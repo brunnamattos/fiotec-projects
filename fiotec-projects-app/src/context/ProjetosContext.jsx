@@ -1,5 +1,12 @@
-import React, { createContext, useContext, useEffect, useState, useCallback } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  useCallback,
+} from "react";
 import { ProjetosService } from "../services/api/projetos/ProjetosService";
+import { ApiException } from "../services/api/ApiException";
 
 const ProjetosContext = createContext();
 
@@ -33,14 +40,18 @@ const ProjetosProvider = ({ children }) => {
     loadProjetos();
   }, []);
 
-  // Use useCallback para evitar que a função getById seja recriada em cada renderização
   const getById = useCallback(async (id) => {
     const data = await ProjetosService.getById(id);
+    if (data instanceof ApiException) {
+      console.log("Erro encontrado, recarregando a página...");
+      window.location.reload();
+    }
     return data;
   }, []);
 
   const handleFilterChange = (category) => {
     setSelectedCategory(category);
+
     if (category === "Todos") {
       setFilteredProjetos(projetos);
     } else {
@@ -49,6 +60,7 @@ const ProjetosProvider = ({ children }) => {
       );
       setFilteredProjetos(filtered);
     }
+
     setSelectedProject(null);
   };
 
@@ -71,6 +83,7 @@ const ProjetosProvider = ({ children }) => {
 
     setFilteredProjetos(filtered);
 
+    // Atualiza os favoritos no localStorage
     localStorage.setItem(
       "projetos",
       JSON.stringify(updatedProjects.filter((projeto) => projeto.favorite))
@@ -87,6 +100,8 @@ const ProjetosProvider = ({ children }) => {
         toggleFavorite,
         selectedProject,
         setSelectedProject,
+        selectedCategory,
+        setSelectedCategory,
       }}
     >
       {children}
